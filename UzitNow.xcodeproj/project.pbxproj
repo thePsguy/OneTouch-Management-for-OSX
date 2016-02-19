@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4DE8BA871C77535C00C063B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8BA861C77535C00C063B8 /* AppDelegate.swift */; };
+		4DE8BA891C77535C00C063B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE8BA881C77535C00C063B8 /* ViewController.swift */; };
+		4DE8BA8B1C77535C00C063B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DE8BA8A1C77535C00C063B8 /* Assets.xcassets */; };
+		4DE8BA8E1C77535C00C063B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE8BA8C1C77535C00C063B8 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4DE8BA831C77535C00C063B8 /* UzitNow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UzitNow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DE8BA861C77535C00C063B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4DE8BA881C77535C00C063B8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DE8BA8A1C77535C00C063B8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DE8BA8D1C77535C00C063B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DE8BA8F1C77535C00C063B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DE8BA801C77535C00C063B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DE8BA7A1C77535C00C063B8 = {
+			isa = PBXGroup;
+			children = (
+				4DE8BA851C77535C00C063B8 /* UzitNow */,
+				4DE8BA841C77535C00C063B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4DE8BA841C77535C00C063B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DE8BA831C77535C00C063B8 /* UzitNow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4DE8BA851C77535C00C063B8 /* UzitNow */ = {
+			isa = PBXGroup;
+			children = (
+				4DE8BA861C77535C00C063B8 /* AppDelegate.swift */,
+				4DE8BA881C77535C00C063B8 /* ViewController.swift */,
+				4DE8BA8A1C77535C00C063B8 /* Assets.xcassets */,
+				4DE8BA8C1C77535C00C063B8 /* Main.storyboard */,
+				4DE8BA8F1C77535C00C063B8 /* Info.plist */,
+			);
+			path = UzitNow;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DE8BA821C77535C00C063B8 /* UzitNow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DE8BA921C77535C00C063B8 /* Build configuration list for PBXNativeTarget "UzitNow" */;
+			buildPhases = (
+				4DE8BA7F1C77535C00C063B8 /* Sources */,
+				4DE8BA801C77535C00C063B8 /* Frameworks */,
+				4DE8BA811C77535C00C063B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UzitNow;
+			productName = UzitNow;
+			productReference = 4DE8BA831C77535C00C063B8 /* UzitNow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DE8BA7B1C77535C00C063B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = thePsguy;
+				TargetAttributes = {
+					4DE8BA821C77535C00C063B8 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 4DE8BA7E1C77535C00C063B8 /* Build configuration list for PBXProject "UzitNow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DE8BA7A1C77535C00C063B8;
+			productRefGroup = 4DE8BA841C77535C00C063B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DE8BA821C77535C00C063B8 /* UzitNow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DE8BA811C77535C00C063B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE8BA8B1C77535C00C063B8 /* Assets.xcassets in Resources */,
+				4DE8BA8E1C77535C00C063B8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DE8BA7F1C77535C00C063B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DE8BA891C77535C00C063B8 /* ViewController.swift in Sources */,
+				4DE8BA871C77535C00C063B8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4DE8BA8C1C77535C00C063B8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4DE8BA8D1C77535C00C063B8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4DE8BA901C77535C00C063B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DE8BA911C77535C00C063B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4DE8BA931C77535C00C063B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UzitNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.thepsguy.UzitNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4DE8BA941C77535C00C063B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = UzitNow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.thepsguy.UzitNow;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DE8BA7E1C77535C00C063B8 /* Build configuration list for PBXProject "UzitNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DE8BA901C77535C00C063B8 /* Debug */,
+				4DE8BA911C77535C00C063B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DE8BA921C77535C00C063B8 /* Build configuration list for PBXNativeTarget "UzitNow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DE8BA931C77535C00C063B8 /* Debug */,
+				4DE8BA941C77535C00C063B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DE8BA7B1C77535C00C063B8 /* Project object */;
+}
