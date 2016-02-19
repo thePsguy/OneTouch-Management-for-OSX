@@ -8,6 +8,7 @@
 
 import Cocoa
 import Foundation
+import Security
 
 class ViewController: NSViewController {
 
@@ -15,7 +16,18 @@ class ViewController: NSViewController {
     @IBOutlet weak var hostName: NSTextField!
     @IBOutlet weak var osxLogo: NSImageView!
     @IBOutlet weak var osName: NSTextField!
+    @IBOutlet weak var CPUPerc: NSTextField!
+    @IBOutlet weak var RAMPerc: NSTextField!
+    @IBAction func onCleaner(sender: AnyObject) {
+            runTerm("sudo rm -rf ~/.Trash/ && rm -rf ~/Library/Logs && rm -rf TMPDIR")
+    }
+    @IBAction func onScan(sender: AnyObject) {
+        runTerm("diskutil verifyvolume ")
+    }
     
+    @IBAction func onApps(sender: AnyObject) {
+        runTerm("open /Applications")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +36,10 @@ class ViewController: NSViewController {
             OSVer = OSVer.substringWithRange(Range<String.Index>(start: OSVer.startIndex.advancedBy(11), end: OSVer.startIndex.advancedBy(13)))
             return Int(OSVer)!
         }
+
+       
+        
+        let _: NSTimer! = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "runTimedCode", userInfo: nil, repeats: true)
         
         let hostString = NSProcessInfo.processInfo().hostName
         let OSVer = getOSVersion()
@@ -58,7 +74,38 @@ class ViewController: NSViewController {
         //let imgName = NSURL(fileURLWithPath:"Images/OSX/11.png")
         self.osxLogo.image = NSImage(named: String(OSVer))
         
+        self.RAMPerc.stringValue = "45%"
         // Do any additional setup after loading the view.
+        
+            }
+    
+    func runTerm(command:String){
+        let s: String = "tell application \"Terminal\" to do script \"\(command)\""
+        print(s)
+        let script: NSAppleScript = NSAppleScript(source: s)!
+        script.executeAndReturnError(nil)
+    }
+    
+    
+    func getCPUPerc() -> String{
+        let pipe: NSPipe = NSPipe()
+        let file: NSFileHandle = pipe.fileHandleForReading
+        let task: NSTask = NSTask()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c","ps -A -o %cpu | awk '{s+=$1} END {print s \"%\"}'"]
+        task.standardOutput = pipe
+        task.launch()
+        let data: NSData = file.readDataToEndOfFile()
+        file.closeFile()
+        let CPUput = String(data: data, encoding: NSUTF8StringEncoding)
+        
+        return CPUput!
+    }
+
+    
+    func runTimedCode() {
+       // print(getCPUPerc())
+       self.CPUPerc.stringValue = getCPUPerc()
     }
 
     override var representedObject: AnyObject? {

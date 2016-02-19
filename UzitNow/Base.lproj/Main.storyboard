@@ -680,6 +680,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onCleaner:" target="XfG-lQ-9wD" id="b5p-ep-f5K"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o98-0q-cCx">
                                 <rect key="frame" x="0.0" y="0.0" width="175" height="175"/>
@@ -696,6 +699,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onScan:" target="XfG-lQ-9wD" id="LAt-I2-164"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T38-r9-wlY">
                                 <rect key="frame" x="174" y="0.0" width="175" height="175"/>
@@ -712,6 +718,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onApps:" target="XfG-lQ-9wD" id="SSq-TV-98G"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vte-ej-PBY">
                                 <rect key="frame" x="348" y="0.0" width="155" height="175"/>
@@ -765,10 +774,48 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-Wm-qFT">
+                                <rect key="frame" x="665" y="130" width="32" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="CPU" id="6Ox-hY-oy7">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vAi-vl-2C3">
+                                <rect key="frame" x="659" y="105" width="45" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="%" id="IXC-hF-N8C">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="taz-xf-0GP">
+                                <rect key="frame" x="663" y="27" width="37" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="%" id="wbT-1r-evH">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uYJ-id-Paq">
+                                <rect key="frame" x="662" y="52" width="39" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="RAM" id="56r-aW-yLf">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="CPUPerc" destination="vAi-vl-2C3" id="NuC-F0-aZr"/>
+                        <outlet property="RAMPerc" destination="taz-xf-0GP" id="bKe-Jn-wAW"/>
                         <outlet property="hostName" destination="9jf-km-EOQ" id="xc5-Mm-fhp"/>
                         <outlet property="osName" destination="XSe-fV-FrO" id="mHi-l4-SdQ"/>
                         <outlet property="osxLogo" destination="Fc1-oz-gei" id="lyI-CA-wB4"/>

@@ -27,6 +27,7 @@
 		4DE8BAC51C77785400C063B8 /* 11.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DE8BABF1C77785400C063B8 /* 11.png */; settings = {ASSET_TAGS = (); }; };
 		4DE8BAC61C77785400C063B8 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DE8BAC01C77785400C063B8 /* 8.png */; settings = {ASSET_TAGS = (); }; };
 		4DE8BAC71C77785400C063B8 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DE8BAC11C77785400C063B8 /* 7.png */; settings = {ASSET_TAGS = (); }; };
+		4DE8BAC91C7798E900C063B8 /* Terminal in Resources */ = {isa = PBXBuildFile; fileRef = 4DE8BAC81C7798E900C063B8 /* Terminal */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4DE8BABF1C77785400C063B8 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
 		4DE8BAC01C77785400C063B8 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
 		4DE8BAC11C77785400C063B8 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		4DE8BAC81C7798E900C063B8 /* Terminal */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = Terminal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				4DE8BA881C77535C00C063B8 /* ViewController.swift */,
 				4DE8BA8A1C77535C00C063B8 /* Assets.xcassets */,
 				4DE8BA8C1C77535C00C063B8 /* Main.storyboard */,
+				4DE8BAC81C7798E900C063B8 /* Terminal */,
 				4DE8BA971C77569000C063B8 /* Images */,
 				4DE8BA8F1C77535C00C063B8 /* Info.plist */,
 			);
@@ -193,6 +196,7 @@
 			files = (
 				4DE8BA8B1C77535C00C063B8 /* Assets.xcassets in Resources */,
 				4DE8BAA91C775E8D00C063B8 /* uz_usb.png in Resources */,
+				4DE8BAC91C7798E900C063B8 /* Terminal in Resources */,
 				4DE8BA8E1C77535C00C063B8 /* Main.storyboard in Resources */,
 				4DE8BAC41C77785400C063B8 /* 9.png in Resources */,
 				4DE8BAA21C775E8D00C063B8 /* uz_broom.png in Resources */,
