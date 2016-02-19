@@ -722,23 +722,15 @@
                                 </buttonCell>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35o-mp-Eqf">
-                                <rect key="frame" x="501" y="263" width="218" height="86"/>
+                                <rect key="frame" x="502" y="263" width="218" height="86"/>
                                 <animations/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_terminal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Mje-hb-6tA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ec-jr-RsS">
-                                <rect key="frame" x="502" y="1" width="217" height="180"/>
-                                <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_details" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="7a5-en-H5Q">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDp-EI-sLW">
-                                <rect key="frame" x="501" y="180" width="218" height="84"/>
+                                <rect key="frame" x="502" y="180" width="218" height="84"/>
                                 <animations/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_robot" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="wI1-vp-APP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -750,9 +742,37 @@
                                 <animations/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="uz_head" id="SJr-qv-4wR"/>
                             </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9jf-km-EOQ">
+                                <rect key="frame" x="509" y="142" width="117" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Host-Name" id="LLs-9E-cQh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc1-oz-gei">
+                                <rect key="frame" x="511" y="41" width="113" height="90"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="e3L-Fd-Ysj"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSe-fV-FrO">
+                                <rect key="frame" x="509" y="16" width="117" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="OSName" id="sy6-OV-TUh">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="hostName" destination="9jf-km-EOQ" id="xc5-Mm-fhp"/>
+                        <outlet property="osName" destination="XSe-fV-FrO" id="mHi-l4-SdQ"/>
+                        <outlet property="osxLogo" destination="Fc1-oz-gei" id="lyI-CA-wB4"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -761,7 +781,6 @@
     </scenes>
     <resources>
         <image name="uz_broom" width="145.5" height="145.5"/>
-        <image name="uz_details" width="174.75" height="132"/>
         <image name="uz_disk" width="145.5" height="144.75"/>
         <image name="uz_dropbox" width="115.5" height="131.25"/>
         <image name="uz_head" width="539.25" height="21.75"/>
