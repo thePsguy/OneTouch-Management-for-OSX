@@ -19,8 +19,17 @@ class ViewController: NSViewController {
     @IBOutlet weak var osName: NSTextField!
     @IBOutlet weak var CPUPerc: NSTextField!
     @IBOutlet weak var RAMPerc: NSTextField!
+    
+    
     @IBAction func onDisk(sender: AnyObject) {
-        runTerm("diskutil verifyvolume ")
+        let actve: String = "activate application \"Disk Utility\""
+        let aid: String = "tell application \"System Events\"\n tell process \"Disk Utility\"\n click (menu item \"Run First Aid...\") of menu 1 of menu bar item \"File\" of menu bar 1\n end tell\n end tell"
+        print(aid)
+        let script2: NSAppleScript = NSAppleScript(source: actve)!
+        let script: NSAppleScript = NSAppleScript(source: aid)!
+        script2.executeAndReturnError(nil)
+        script.executeAndReturnError(nil)
+        //runTerm("diskutil verifyvolume /")
     }
     
 
@@ -33,17 +42,26 @@ class ViewController: NSViewController {
             runTerm("sudo rm -rf ~/.Trash/ && rm -rf ~/Library/Logs && rm -rf TMPDIR && rm -rf ~/Library/Logs")
     }
     @IBAction func onSysinfo(sender: AnyObject) {
-        runTerm("/Applications/Utilities/\'System Information.app\'/Contents/MacOS/\'System Information\'")
+        let actve: String = "activate application \"System Information\""
+        let script2: NSAppleScript = NSAppleScript(source: actve)!
+        script2.executeAndReturnError(nil)
+        //runTerm("/Applications/Utilities/\'System Information.app\'/Contents/MacOS/\'System Information\'")
     }
     @IBAction func onRobo(sender: AnyObject) {
-           runTerm("/Applications/Utilities/\'Activity Monitor.app\'/Contents/MacOS/\'Activity Monitor\'")
+        let actve: String = "activate application \"Activity Monitor\""
+        let script2: NSAppleScript = NSAppleScript(source: actve)!
+        script2.executeAndReturnError(nil)
+        //runTerm("/Applications/Utilities/\'Activity Monitor.app\'/Contents/MacOS/\'Activity Monitor\'")
     }
     @IBAction func onScan(sender: AnyObject) {
-        runTerm("/System/Library/CoreServices/\'Network Diagnostics.app\'/Contents/MacOS/\'Network Diagnostics\'")
+        let actve: String = "activate application \"Network Diagnostics\""
+        let script2: NSAppleScript = NSAppleScript(source: actve)!
+        script2.executeAndReturnError(nil)
+        //runTerm("/System/Library/CoreServices/\'Network Diagnostics.app\'/Contents/MacOS/\'Network Diagnostics\'")
     }
     
     @IBAction func onApps(sender: AnyObject) {
-        runTerm("open /Applications")
+        runTerm("open /Applications && exit")
     }
 
     override func viewDidLoad() {

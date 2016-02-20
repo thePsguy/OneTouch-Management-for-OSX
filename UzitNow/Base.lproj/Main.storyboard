@@ -696,10 +696,10 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-Qx-wBV">
-                                <rect key="frame" x="33" y="25" width="109" height="19"/>
+                                <rect key="frame" x="2" y="28" width="170" height="17"/>
                                 <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Disk Checker" id="3NL-9r-sOy">
-                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Verify &amp; Repair Disk" id="3NL-9r-sOy">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
                                     <color key="textColor" red="0.92465641359999995" green="0.92465641359999995" blue="0.92465641359999995" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -726,7 +726,7 @@
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vte-ej-PBY">
                                 <rect key="frame" x="348" y="0.0" width="155" height="175"/>
                                 <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_monitor" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="70f-3c-PDd">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_monitor" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="70f-3c-PDd">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -833,17 +833,8 @@
                                 <rect key="frame" x="373" y="191" width="104" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Applications" id="wbk-6P-p8Q">
-                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
                                     <color key="textColor" red="0.94551701570680624" green="0.94551701570680624" blue="0.94551701570680624" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-Od-QfX">
-                                <rect key="frame" x="379" y="25" width="92" height="18"/>
-                                <animations/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="System Info" id="Ebs-Uz-GTT">
-                                    <font key="font" metaFont="systemSemibold" size="13"/>
-                                    <color key="textColor" red="0.8852462369109948" green="0.8852462369109948" blue="0.8852462369109948" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -862,7 +853,7 @@
                                 <rect key="frame" x="207" y="180" width="108" height="39"/>
                                 <animations/>
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Network Diagnostics" id="naJ-O9-92H">
-                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
                                     <color key="textColor" red="0.94551701570000002" green="0.94551701570000002" blue="0.94551701570000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -882,6 +873,15 @@
                                 <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Launch Terminal Instance" id="RWX-pe-qbh">
                                     <font key="font" metaFont="systemSemibold" size="15"/>
                                     <color key="textColor" red="0.95842195680628273" green="0.95842195680628273" blue="0.95842195680628273" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-Od-QfX">
+                                <rect key="frame" x="376" y="27" width="98" height="18"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="System Info" id="Ebs-Uz-GTT">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" red="0.8852462369109948" green="0.8852462369109948" blue="0.8852462369109948" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
