@@ -10,6 +10,7 @@ import Cocoa
 import Foundation
 import Security
 
+
 class ViewController: NSViewController {
 
     
@@ -22,25 +23,32 @@ class ViewController: NSViewController {
         runTerm("diskutil verifyvolume ")
     }
     
+
+    
     @IBAction func onTerm(sender: AnyObject) {
-        runTerm("/Applications/Utilities/\'Activity Monitor.app\'/Contents/MacOS/\'Activity Monitor\'")
+     runTerm("")
     }
     
     @IBAction func onCleaner(sender: AnyObject) {
-            runTerm("sudo rm -rf ~/.Trash/ && rm -rf ~/Library/Logs && rm -rf TMPDIR")
+            runTerm("sudo rm -rf ~/.Trash/ && rm -rf ~/Library/Logs && rm -rf TMPDIR && rm -rf ~/Library/Logs")
     }
     @IBAction func onSysinfo(sender: AnyObject) {
         runTerm("/Applications/Utilities/\'System Information.app\'/Contents/MacOS/\'System Information\'")
     }
+    @IBAction func onRobo(sender: AnyObject) {
+           runTerm("/Applications/Utilities/\'Activity Monitor.app\'/Contents/MacOS/\'Activity Monitor\'")
+    }
     @IBAction func onScan(sender: AnyObject) {
-        
+        runTerm("/System/Library/CoreServices/\'Network Diagnostics.app\'/Contents/MacOS/\'Network Diagnostics\'")
     }
     
     @IBAction func onApps(sender: AnyObject) {
         runTerm("open /Applications")
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         func getOSVersion()-> Int {
             var OSVer: String = NSProcessInfo.processInfo().operatingSystemVersionString
@@ -85,7 +93,9 @@ class ViewController: NSViewController {
         //let imgName = NSURL(fileURLWithPath:"Images/OSX/11.png")
         self.osxLogo.image = NSImage(named: String(OSVer))
         
-        self.RAMPerc.stringValue = "45%"
+        
+        
+        self.RAMPerc.stringValue = getRAM()
         // Do any additional setup after loading the view.
         
             }
@@ -114,6 +124,23 @@ class ViewController: NSViewController {
         
         return CPUput!
     }
+    
+    func getRAM() -> String{
+        let pipe: NSPipe = NSPipe()
+        let file: NSFileHandle = pipe.fileHandleForReading
+        let task: NSTask = NSTask()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c","sysctl hw.memsize"]
+        task.standardOutput = pipe
+        task.launch()
+        let data: NSData = file.readDataToEndOfFile()
+        file.closeFile()
+        var RAM:String = String(data: data, encoding: NSUTF8StringEncoding)!
+        RAM = RAM.substringWithRange(Range<String.Index>(start: RAM.startIndex.advancedBy(12), end: RAM.endIndex.advancedBy(-1)))
+        let RAMvalue:String = String(Int(RAM)!/1073741824) + " GB"
+        return RAMvalue
+    }
+
 
     
     func runTimedCode() {

@@ -652,7 +652,7 @@
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
                     <window key="window" title="UzitNow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" unifiedTitleAndToolbar="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -663,7 +663,7 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="250"/>
+            <point key="canvasLocation" x="-44" y="254"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
@@ -695,17 +695,15 @@
                                     <action selector="onDisk:" target="XfG-lQ-9wD" id="ZLm-Du-14M"/>
                                 </connections>
                             </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNY-VV-1ov">
-                                <rect key="frame" x="175" y="174" width="175" height="175"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h2G-Qx-wBV">
+                                <rect key="frame" x="33" y="25" width="109" height="19"/>
                                 <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_radar" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="lIZ-L6-fdz">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="onScan:" target="XfG-lQ-9wD" id="LAt-I2-164"/>
-                                </connections>
-                            </button>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Disk Checker" id="3NL-9r-sOy">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" red="0.92465641359999995" green="0.92465641359999995" blue="0.92465641359999995" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T38-r9-wlY">
                                 <rect key="frame" x="174" y="0.0" width="175" height="175"/>
                                 <animations/>
@@ -739,7 +737,7 @@
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="35o-mp-Eqf">
                                 <rect key="frame" x="502" y="263" width="218" height="86"/>
                                 <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_terminal" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Mje-hb-6tA">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_terminal" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="Mje-hb-6tA">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -748,12 +746,15 @@
                                 </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDp-EI-sLW">
-                                <rect key="frame" x="502" y="180" width="218" height="84"/>
+                                <rect key="frame" x="502" y="174" width="218" height="91"/>
                                 <animations/>
-                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_robot" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="wI1-vp-APP">
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_robot" imagePosition="overlaps" alignment="center" imageScaling="axesIndependently" inset="2" id="wI1-vp-APP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="onRobo:" target="XfG-lQ-9wD" id="Pfe-32-LV6"/>
+                                </connections>
                             </button>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c5d-Vf-FCv">
                                 <rect key="frame" x="0.0" y="348" width="719" height="29"/>
@@ -772,7 +773,7 @@
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fc1-oz-gei">
                                 <rect key="frame" x="511" y="41" width="113" height="90"/>
                                 <animations/>
-                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="e3L-Fd-Ysj"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="e3L-Fd-Ysj"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XSe-fV-FrO">
                                 <rect key="frame" x="509" y="16" width="117" height="17"/>
@@ -819,6 +820,71 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcl-wW-qw5">
+                                <rect key="frame" x="54" y="191" width="67" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Cleaner" id="xG2-td-deO">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" red="0.92465641361256545" green="0.92465641361256545" blue="0.92465641361256545" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iwe-QU-ITX">
+                                <rect key="frame" x="373" y="191" width="104" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Applications" id="wbk-6P-p8Q">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" red="0.94551701570680624" green="0.94551701570680624" blue="0.94551701570680624" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-Od-QfX">
+                                <rect key="frame" x="379" y="25" width="92" height="18"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="System Info" id="Ebs-Uz-GTT">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" red="0.8852462369109948" green="0.8852462369109948" blue="0.8852462369109948" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNY-VV-1ov">
+                                <rect key="frame" x="174" y="174" width="175" height="175"/>
+                                <animations/>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_radar" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="lIZ-L6-fdz">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onScan:" target="XfG-lQ-9wD" id="LAt-I2-164"/>
+                                </connections>
+                            </button>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aH4-WS-9E7">
+                                <rect key="frame" x="207" y="180" width="108" height="39"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Network Diagnostics" id="naJ-O9-92H">
+                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <color key="textColor" red="0.94551701570000002" green="0.94551701570000002" blue="0.94551701570000002" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oT7-7F-ymR">
+                                <rect key="frame" x="593" y="190" width="104" height="59"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Manage            Active Processes" id="u79-4t-Xjx">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" red="0.97519224476439792" green="0.97519224476439792" blue="0.97519224476439792" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1qo-SR-Sck">
+                                <rect key="frame" x="596" y="272" width="97" height="67"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Launch Terminal Instance" id="RWX-pe-qbh">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" red="0.95842195680628273" green="0.95842195680628273" blue="0.95842195680628273" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <animations/>
                     </view>
@@ -832,17 +898,18 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194.5" y="708.5"/>
+            <point key="canvasLocation" x="75.5" y="790.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
         <image name="uz_broom" width="145.5" height="145.5"/>
         <image name="uz_disk" width="145.5" height="144.75"/>
         <image name="uz_dropbox" width="115.5" height="131.25"/>
         <image name="uz_head" width="539.25" height="21.75"/>
         <image name="uz_monitor" width="115.5" height="132"/>
         <image name="uz_radar" width="145.5" height="146.25"/>
-        <image name="uz_robot" width="174.75" height="67.5"/>
+        <image name="uz_robot" width="174.75" height="68.25"/>
         <image name="uz_terminal" width="173.25" height="67.5"/>
         <image name="uz_usb" width="145.5" height="144.75"/>
     </resources>
