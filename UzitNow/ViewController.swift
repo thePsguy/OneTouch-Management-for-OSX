@@ -18,11 +18,22 @@ class ViewController: NSViewController {
     @IBOutlet weak var osName: NSTextField!
     @IBOutlet weak var CPUPerc: NSTextField!
     @IBOutlet weak var RAMPerc: NSTextField!
+    @IBAction func onDisk(sender: AnyObject) {
+        runTerm("diskutil verifyvolume ")
+    }
+    
+    @IBAction func onTerm(sender: AnyObject) {
+        runTerm("/Applications/Utilities/\'Activity Monitor.app\'/Contents/MacOS/\'Activity Monitor\'")
+    }
+    
     @IBAction func onCleaner(sender: AnyObject) {
             runTerm("sudo rm -rf ~/.Trash/ && rm -rf ~/Library/Logs && rm -rf TMPDIR")
     }
+    @IBAction func onSysinfo(sender: AnyObject) {
+        runTerm("/Applications/Utilities/\'System Information.app\'/Contents/MacOS/\'System Information\'")
+    }
     @IBAction func onScan(sender: AnyObject) {
-        runTerm("diskutil verifyvolume ")
+        
     }
     
     @IBAction func onApps(sender: AnyObject) {
