@@ -91,10 +91,12 @@ class ViewController: NSViewController {
             }
     
     func runTerm(command:String){
+        let actve: String = "activate application \"Terminal\""
         let s: String = "tell application \"Terminal\" to do script \"\(command)\""
-        print(s)
+        let script2: NSAppleScript = NSAppleScript(source: actve)!
         let script: NSAppleScript = NSAppleScript(source: s)!
         script.executeAndReturnError(nil)
+        script2.executeAndReturnError(nil)
     }
     
     
