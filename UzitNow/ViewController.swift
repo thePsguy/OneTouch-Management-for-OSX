@@ -33,6 +33,11 @@ class ViewController: NSViewController {
     }
     
 
+    @IBAction func visit(sender: AnyObject) {
+        let ascript: String = "activate application \"Safari\"\n tell application \"Safari\"\n        tell window 1\n        set current tab to (make new tab with properties {URL:\"http://www.uzitnow.com\"})\n        end tell\n        end tell"
+        let script: NSAppleScript = NSAppleScript(source: ascript)!
+        script.executeAndReturnError(nil)
+    }
     
     @IBAction func onTerm(sender: AnyObject) {
      runTerm("")

@@ -673,6 +673,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="719" height="377"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LZ-QR-Tup">
+                                <rect key="frame" x="502" y="0.0" width="217" height="174"/>
+                                <animations/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="axesIndependently" image="uz_bg" id="rGo-ya-oYh"/>
+                            </imageView>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zAf-ql-GdU">
                                 <rect key="frame" x="0.0" y="174" width="175" height="175"/>
                                 <animations/>
@@ -705,12 +710,15 @@
                                 </textFieldCell>
                             </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T38-r9-wlY">
-                                <rect key="frame" x="174" y="0.0" width="175" height="175"/>
+                                <rect key="frame" x="175" y="0.0" width="175" height="175"/>
                                 <animations/>
                                 <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="uz_usb" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="8oL-rK-4dL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="visit:" target="XfG-lQ-9wD" id="FaQ-Le-pvy"/>
+                                </connections>
                             </button>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-l0-L1i">
                                 <rect key="frame" x="348" y="174" width="154" height="175"/>
@@ -838,6 +846,15 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-Od-QfX">
+                                <rect key="frame" x="376" y="27" width="98" height="18"/>
+                                <animations/>
+                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="System Info" id="Ebs-Uz-GTT">
+                                    <font key="font" metaFont="systemSemibold" size="15"/>
+                                    <color key="textColor" red="0.8852462369109948" green="0.8852462369109948" blue="0.8852462369109948" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TNY-VV-1ov">
                                 <rect key="frame" x="174" y="174" width="175" height="175"/>
                                 <animations/>
@@ -876,12 +893,12 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p6L-Od-QfX">
-                                <rect key="frame" x="376" y="27" width="98" height="18"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pV7-cJ-Qq2">
+                                <rect key="frame" x="194" y="28" width="135" height="17"/>
                                 <animations/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="System Info" id="Ebs-Uz-GTT">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Visit UzitNow.com" id="exm-ET-QTM">
                                     <font key="font" metaFont="systemSemibold" size="15"/>
-                                    <color key="textColor" red="0.8852462369109948" green="0.8852462369109948" blue="0.8852462369109948" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" red="0.96347349476439792" green="0.96347349476439792" blue="0.96347349476439792" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
@@ -898,11 +915,12 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.5" y="790.5"/>
+            <point key="canvasLocation" x="-43.5" y="789.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="NSApplicationIcon" width="128" height="128"/>
+        <image name="uz_bg" width="200" height="200"/>
         <image name="uz_broom" width="145.5" height="145.5"/>
         <image name="uz_disk" width="145.5" height="144.75"/>
         <image name="uz_dropbox" width="115.5" height="131.25"/>
